@@ -3,7 +3,16 @@ import { Controller } from '@nestjs/common';
 import { UpdateTodoDto } from './dto/update-todo.dto';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { TodoService } from './todo.service';
+import {
+  ApiTags,
+  // ApiCreatedResponse,
+  // ApiOkResponse,
+  // ApiQuery,
+  // ApiNotFoundResponse,
+  // ApiBadRequestResponse,
+} from '@nestjs/swagger';
 
+@ApiTags('Todos')
 @Controller('todo')
 export class TodoController {
   constructor(private readonly service: TodoService) {}
